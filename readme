@@ -1,1 +1,40 @@
 
+
+
+Docker + K3s en el host
+dockerfile
+
+
+
+hibrida
+
+platform-assistant/
+│
+├── app/
+│   ├── main.py
+│   ├── llm.py
+│   ├── security.py
+│   ├── generator.py
+│
+├── templates/
+│   ├── deployment.yaml
+│   └── service.yaml
+│
+├── generated/
+│
+├── requirements.txt
+│
+└── Dockerfile
+
+
+ejecutamos
+
+docker build --no-cache -t platform-assistant .
+
+ingresamos
+
+docker run -it --rm \
+  -v "${PWD}/generated:/app/generated" \
+  platform-assistant
+  
+
