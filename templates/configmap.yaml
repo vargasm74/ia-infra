@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: APP_NAME-config
+
+data:
+  APP_ENV: APP_ENV
+  LOG_LEVEL: LOG_LEVEL
